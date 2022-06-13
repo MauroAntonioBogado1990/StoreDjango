@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block titulo %} Lista de articulos {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        Lista de Articulos
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Articulos</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
+                    <th>Descripcion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pantalon de Jeans</td>
+                    <td>3400</td>
+                    <td>imagen.jpg</td>
+                    <td>Pantalon de color celeste de determinada marca</td>
+                    <td>Editar | Borrar </td>
+                </tr>
+                <tr>
+                    <td scope="row"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+
+
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}
