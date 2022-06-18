@@ -13,6 +13,7 @@
         <h4 class="card-title">Articulos</h4>
         <table class="table">
             <thead>
+                
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
@@ -21,18 +22,21 @@
                     <th>Descripcion</th>
                     <th>Acciones</th>
                 </tr>
+                
             </thead>
             <tbody>
+                {% for articulo in articulos %}
                 <tr>
-                    <td>1</td>
-                    <td>Pantalon de Jeans</td>
-                    <td>3400</td>
-                    <td>imagen.jpg</td>
-                    <td>Pantalon de color celeste de determinada marca</td>
+                    <td>{{ articulo.id }}</td>
+                    <td>{{ articulo.nombre }}</td>
+                    <td>{{ articulo.precio }}</td>
+                    <td>{{ articulo.imagen }}</td>
+                    <td>{{ articulo.descripcion }}</td>
                     <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a> |
-                        <a name="" id="" class="btn btn-danger" href="{% url 'borrar' %}" role="button">Borrar</a>
+                        <!--<a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>-->
                     </td>
                 </tr>
+                {% endfor %}
                 <tr>
                     <td scope="row"></td>
                     <td></td>

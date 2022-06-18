@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Articulo
 # Create your views here.
 #posteriormente para poder ver las vistas, tenemos que crear el archivo urls.py
 def inicio(request):
@@ -11,7 +12,8 @@ def articulos(request):
 
 #agregamos las vistas
 def verarticulos(request):
-    return render(request, 'articulos/index.html')
+    articulos = Articulo.objects.all()
+    return render(request, 'articulos/index.html', {'articulos' : articulos})
 
 def crear(request):
     return render(request, 'articulos/crear.html')
