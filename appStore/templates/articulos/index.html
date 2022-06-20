@@ -35,8 +35,8 @@
                       
                     </td>
                     <td>{{ articulo.descripcion }}</td>
-                    <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a> |
-                        <!--<a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>-->
+                    <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' articulo.id %}" role="button">Editar</a> |
+                        <a name="" id="" class="btn btn-danger" href="{% url 'borrar'  articulo.id %} " role="button">Borrar</a>
                     </td>
                 </tr>
                 {% endfor %}
