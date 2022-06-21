@@ -27,6 +27,9 @@ def crear(request):
 def editar(request, id):
     articulos = Articulo.objects.get(id=id)
     formulario = ArticuloForm(request.POST or None,  request.FILES or None, instance = articulos)
+    if formulario.is_valid() and request.POST:
+        formulario.save()
+        return redirect('articulos')
     return render(request, 'articulos/editar.html', {'formulario' : formulario})
 
 def borrar(request, id):
