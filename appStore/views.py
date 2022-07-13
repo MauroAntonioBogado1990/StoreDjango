@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
+from django.db.models import Q
 from .models import Articulo
 from .forms import ArticuloForm
 # Create your views here.
@@ -13,8 +14,27 @@ def articulos(request):
 
 #agregamos las vistas
 def verarticulos(request):
+    #agregado de form para la búsqueda de elementos
     articulos = Articulo.objects.all()
+    
     return render(request, 'articulos/index.html', {'articulos' : articulos})
+
+
+def buscar(request):
+    #agregado de form para la búsqueda de elementos
+    busqueda = request.GET.get("buscar")
+    articulos = Articulo.objects.all()
+
+    if busqueda:
+        articulos = Articulo.objects.filter(
+            Q(id__contains = busqueda) |
+            Q(nombre__icontains = busqueda) |
+            Q(precio__icontains = busqueda) |
+            Q(descripcion__icontains = busqueda) 
+
+        ).distinct()
+    
+    return render(request, 'articulos/buscar.html', {'articulos' : articulos})
 
 #recibimos los archivos y además los enviamos para mostrar
 def crear(request):

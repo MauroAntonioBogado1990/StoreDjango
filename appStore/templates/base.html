@@ -16,11 +16,12 @@
       <div class="nav navbar-nav">
           <a class="nav-item nav-link active" href="{% url 'inicio' %}">Inicio </a>
           <a class="nav-item nav-link active" href=" {% url 'verarticulos' %} ">Articulos</a>
+          <a class="nav-item nav-link active" href=" {% url 'buscar' %} ">Buscar</a>
           
       </div>
   </nav>
   <body>
-    <div class="container">
+    <div class="container ">
       <div class="row">
         <div class="col-12">
           {% block contenido %} {% endblock %} 
