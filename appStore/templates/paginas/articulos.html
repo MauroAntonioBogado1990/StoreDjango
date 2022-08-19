@@ -4,6 +4,11 @@
 
 {% block contenido %}
 
-Aquí iran los elementos de la lista de articulos 
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Articulo Cargado</h4>
+    <p>El articulo se cargo correctamente.</p>
+    <hr>
+    <p class="mb-0">Lo encontrara disponible en la ventana <b><a class="nav-item nav-link active" href=" {% url 'verarticulos' %} ">Articulos(click aqui)</a></b></p>
+  </div>
 
 {% endblock %}

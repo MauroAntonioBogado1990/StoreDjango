@@ -1,24 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
 {% block contenido %}
 {% block titulo %}
-Buscar 
+
 {% endblock %}
 
 {% block buscador %}
 
-<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="GET">
-    <div class="input-group">
+<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" name="buscarbut"method="GET">
+    <div class="input-group " >
 
-        <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar Articulos..." name="buscar" value="{{ request.GET.buscar }}">
-        <div class="input-group-append">
+        <input type="text" class="form-control bg-light border-0 small mb-3" placeholder="Buscar Articulos..." name="buscar" value="{{ request.GET.buscar }}">
+        <div class="input-group-append" >
             <button class="btn btn-primary" type="submit">
-                <h6>Buscar</h6>
+                <h6><b>Buscar</b></h6>
                 <!--<i class="fa fa-search" aria-hidden="true"></i>--> 
             </button>
         </div>
     </div>
 
 </form> 
+
 {% endblock buscador %}
 
 
