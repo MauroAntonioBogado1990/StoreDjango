@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(224, 204, 224);
+    
+}
+.container {
+    margin-top: 50px;
+    display: flex;
+}
+
+.input-group {
+   display: flex;
+    
+   
+    
+}
+.col-12{
+    margin-top: 10px;
+    
+}
+
+.card {
+    margin-top: 10px;
+    display: flex;
+    
+}
