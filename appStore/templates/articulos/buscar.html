@@ -39,7 +39,7 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Precio</th>
-                    <th>Imagen</th>
+                    <!--<th>Imagen</th>-->
                     <th>Descripcion</th>
                     <th>Acciones</th>
                 </tr>
@@ -51,11 +51,8 @@
                     <td>{{ articulo.id }}</td>
                     <td>{{ articulo.nombre }}</td>
                     <td>{{ articulo.precio }}</td>
-                    <td>
-                    <img src="{{ articulo.imagen.url }}" height="100">    
-                      
-                    </td>
                     <td>{{ articulo.descripcion }}</td>
+                    <!--<img src="{{ articulo.imagen.url }}" height="100">    -->
                     <td> <a name="" id="" class="btn btn-info" href="{% url 'editar' articulo.id %}" role="button">Editar</a> |
                         <a name="" id="" class="btn btn-danger" href="{% url 'borrar'  articulo.id %} " role="button">Borrar</a>
                     </td>
