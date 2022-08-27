@@ -1,1 +1,0 @@
-web: gunicorn storedjango.wsgi --log-file -
